@@ -2,8 +2,8 @@ import React from "react";
 
 function HomePage() {
   return (
-    <main class="center" id="main">
-      <section class="page-area">
+    <main className="center" id="main">
+      <section className="page-area">
         <h2>Improve your finances by following these simple recommendations</h2>
         <br />
         <hr />
@@ -41,12 +41,12 @@ function HomePage() {
         </article>
 
         <article>
-          <h2 class="center">Chart</h2>
+          <h2 className="center">Chart</h2>
 
           <figure>
             <canvas id="myChart" width="450" height="450"></canvas>
 
-            <figcaption class="center">Personal budget chart</figcaption>
+            <figcaption className="center">Personal budget chart</figcaption>
           </figure>
         </article>
       </section>

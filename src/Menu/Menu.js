@@ -1,20 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
     <nav>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>;
         </li>
         <li>
-          <a href="/about.html">About</a>
+          <Link to="/login">Login</Link>;
         </li>
         <li>
-          <a href="/login.html">Login</a>
-        </li>
-        <li>
-          <a href="https://google.com">Google</a>
+          <Link to="/about">About</Link>;
         </li>
       </ul>
     </nav>
