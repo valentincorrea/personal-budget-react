@@ -2,7 +2,7 @@ import { React } from "react";
 import { useEffect, useState } from "react";
 // import pb from "../pb-data.json";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import axios from "axios";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -25,7 +25,7 @@ function Chart() {
   useEffect(() => {
     // 1. Fetch data asynchronously inside useEffect
     // The URL should point to your JSON file, ensure it's accessible.
-    // If it's a static file in the 'public' folder, use the path:
+
     axios
       .get("/pb-data.json")
       .then((res) => {
@@ -39,7 +39,7 @@ function Chart() {
               {
                 data: apiData.map((item) => item.budget),
                 backgroundColor: apiData.map((item) => item.backgroundColor),
-                // It's good practice to have the hover color as well
+                //Hover color as well
                 hoverBackgroundColor: apiData.map(
                   (item) => item.backgroundColor
                 ),
@@ -57,14 +57,14 @@ function Chart() {
         }
       })
       .catch((err) => {
-        // 4. Handle fetch errors (like 404)
+        // 4. Handle fetch errors
         console.error("Error fetching budget data:", err);
         setError("Failed to fetch data. Check network and API path.");
         setLoading(false);
       });
   }, []); // Empty dependency array ensures this runs only once on mount
 
-  // --- Conditional Rendering ---
+  // Conditional Rendering
   if (loading) {
     return <div>Loading chart...</div>;
   }
@@ -78,12 +78,12 @@ function Chart() {
     return <div>No budget data available to display.</div>;
   }
 
-  // --- Final Render ---
+  // Final Render
   return (
     <div style={{ maxWidth: "400px", margin: "0 auto" }}>
-      <h2>Personal Budget Doughnut Chart</h2>
+      <h2>Personal Budget Pie Chart</h2>
       {/* 5. Use the Doughnut component and pass the state as its 'data' prop */}
-      <Doughnut data={chartData} />
+      <Pie data={chartData} />
     </div>
   );
 }

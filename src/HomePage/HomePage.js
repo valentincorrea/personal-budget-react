@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "../Chart/Chart";
+import D3Chart from "../D3Chart/D3Chart";
 
 function HomePage() {
   return (
@@ -44,10 +45,11 @@ function HomePage() {
         <article>
           <h2 className="center">Chart</h2>
           <Chart></Chart>
+          <D3Chart></D3Chart>
         </article>
       </section>
       <div id="chart-container"></div>
-      <script src="https://d3js.org/d3.v3.min.js"></script>
+      {/* <script src="https://d3js.org/d3.v3.min.js"></script> */}
     </main>
   );
 }
