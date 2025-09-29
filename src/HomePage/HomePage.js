@@ -1,4 +1,5 @@
 import React from "react";
+import Chart from "../Chart/Chart";
 
 function HomePage() {
   return (
@@ -42,12 +43,7 @@ function HomePage() {
 
         <article>
           <h2 className="center">Chart</h2>
-
-          <figure>
-            <canvas id="myChart" width="450" height="450"></canvas>
-
-            <figcaption className="center">Personal budget chart</figcaption>
-          </figure>
+          <Chart></Chart>
         </article>
       </section>
       <div id="chart-container"></div>

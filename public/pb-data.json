@@ -1,0 +1,39 @@
+{
+  "myBudget": [
+    {
+      "title": "Rent",
+      "budget": 700,
+      "backgroundColor": "#ffcd56"
+    },
+    {
+      "title": "Utilities",
+      "budget": 150,
+      "backgroundColor": "#ff6384"
+    },
+    {
+      "title": "Phone",
+      "budget": 90,
+      "backgroundColor": "#36a2eb"
+    },
+    {
+      "title": "Grocery",
+      "budget": 150,
+      "backgroundColor": "#fd6b19"
+    },
+    {
+      "title": "Eat out",
+      "budget": 75,
+      "backgroundColor": "#9966ff"
+    },
+    {
+      "title": "Transportation",
+      "budget": 120,
+      "backgroundColor": "#009688"
+    },
+    {
+      "title": "Entertainment",
+      "budget": 45,
+      "backgroundColor": "#c9cbcf"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import React from "react";
 import HomePage from "./HomePage/HomePage";
 import LoginPage from "./LoginPage/LoginPage";
 import AboutPage from "./AboutPage/AboutPage";
+import Chart from "./Chart/Chart";
 import Menu from "./Menu/Menu";
 import Hero from "./Hero/Hero";
 import Footer from "./Footer/Footer";
@@ -21,7 +22,13 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </div>
-      {/* <HomePage /> */}
+      <HomePage />
+      <Chart>
+        <div>
+          <h2>Test!!!</h2>
+          <canvas id="myChart" width="450" height="450"></canvas>;
+        </div>
+      </Chart>
       <Footer />
     </Router>
   );
